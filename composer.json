@@ -1,0 +1,73 @@
+{
+    "name": "dennis-ploetner/crypto-verifier",
+    "description": "Crypto Verifier in PHP for the Cardano Blockchain.",
+    "license": "GPL-2.0-or-later",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dennis Ploetner",
+            "email": "re@lloc.de",
+            "homepage": "https://ploetner.io/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.3"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "inpsyde/*": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://raw.githubusercontent.com/inpsyde/wp-stubs/main",
+            "only": [
+                "inpsyde/wp-stubs-versions"
+            ]
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "lloc\\CryptoVerifier\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "lloc\\CryptoVerifier\\Tests\\": [
+                "tests/phpunit/",
+                "tests/phpunit/src"
+            ]
+        }
+    },
+    "scripts": {
+        "phpcs": "@php ./vendor/bin/phpcs",
+        "phpcs:fix": "@php ./vendor/bin/phpcbf",
+        "phpstan": "@php ./vendor/bin/phpstan analyse --memory-limit=1G",
+        "phpunit": [
+            "@putenv XDEBUG_MODE=coverage",
+            "@php ./vendor/bin/phpunit --coverage-text"
+        ],
+        "qa": [
+            "@phpcs",
+            "@phpstan",
+            "@phpunit"
+        ]
+    },
+    "require-dev": {
+        "syde/phpcs": "^1.0",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "swissspidy/phpstan-no-private": "^1.0",
+        "phpunit/phpunit": "^11",
+        "inpsyde/wp-stubs-versions": "dev-latest",
+        "brain/monkey": "^2.6",
+        "phpstan/phpstan-mockery": "^2.0"
+    }
+}

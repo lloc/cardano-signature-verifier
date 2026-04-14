@@ -1,0 +1,21 @@
+{
+    "name": "crypto-verifier",
+    "description": "Crypto Verifier for the Cardano Blockchain.",
+    "license": "GPL-2.0-or-later",
+    "version": "1.0.0",
+    "author": {
+        "name": "Dennis Ploetner",
+        "email": "re@lloc.de",
+        "url": "https://ploetner.io/"
+    },
+    "engines": {
+        "node": "~22.0"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^30.0.0"
+    },
+    "scripts": {
+        "lint:md": "wp-scripts lint-md-docs README.md docs/**/*.md",
+        "lint:md:fix": "wp-scripts lint-md-docs README.md docs/**/*.md -- --fix"
+    }
+}
