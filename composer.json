@@ -50,10 +50,7 @@
         "phpcs": "@php ./vendor/bin/phpcs",
         "phpcs:fix": "@php ./vendor/bin/phpcbf",
         "phpstan": "@php ./vendor/bin/phpstan analyse --memory-limit=1G",
-        "phpunit": [
-            "@putenv XDEBUG_MODE=coverage",
-            "@php ./vendor/bin/phpunit --coverage-text"
-        ],
+        "phpunit": "@php -d xdebug.mode=coverage ./vendor/bin/phpunit --coverage-text",
         "qa": [
             "@phpcs",
             "@phpstan",
