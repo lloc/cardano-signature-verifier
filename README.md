@@ -1,6 +1,6 @@
-# PHP Crypto Verifier
+# Cardano Signature Verifier
 
-Crypto Verifier in PHP for the Cardano Blockchain.
+Cardano Signature Verifier in PHP/WordPress for the Cardano Blockchain.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Crypto Verifier in PHP for the Cardano Blockchain.
 The best way to use this package is:
 
 ```shell
-composer require dennis-ploetner/crypto-verifier
+composer require lloc/cardano-signature-verifier
 ```
 
 Requires PHP 8.3 or later.
@@ -28,8 +28,8 @@ The `CardanoSignerCliVerifier` wraps the
 [cardano-signer](https://github.com/gitmachtl/cardano-signer) binary:
 
 ```php
-use lloc\CryptoVerifier\Infrastructure\CardanoSignerCliVerifier;
-use lloc\CryptoVerifier\VerifySignatureCommand;
+use lloc\CardanoSignatureVerifier\Infrastructure\CardanoSignerCliVerifier;
+use lloc\CardanoSignatureVerifier\VerifySignatureCommand;
 
 $verifier = new CardanoSignerCliVerifier(
     executor: static fn (string $cmd): ?string => shell_exec($cmd),
@@ -54,12 +54,11 @@ if ($result->valid) {
 
 ### Verify a signature via a remote HTTP service
 
-The `RemoteHttpVerifier` delegates verification to an external API. It uses
-the WordPress HTTP API internally and is designed for use within WordPress:
+The `RemoteHttpVerifier` delegates verification to an external API. It uses the WordPress HTTP API internally and is designed for use within WordPress:
 
 ```php
-use lloc\CryptoVerifier\Infrastructure\RemoteHttpVerifier;
-use lloc\CryptoVerifier\VerifySignatureCommand;
+use lloc\CardanoSignatureVerifier\Infrastructure\RemoteHttpVerifier;
+use lloc\CardanoSignatureVerifier\VerifySignatureCommand;
 
 $verifier = new RemoteHttpVerifier(
     endpoint: 'https://verify.example.com/api/verify',
@@ -83,9 +82,9 @@ if ($result->valid) {
 Implement `SignatureVerifierInterface` to plug in any verification backend:
 
 ```php
-use lloc\CryptoVerifier\SignatureVerifierInterface;
-use lloc\CryptoVerifier\VerificationResult;
-use lloc\CryptoVerifier\VerifySignatureCommand;
+use lloc\CardanoSignatureVerifier\SignatureVerifierInterface;
+use lloc\CardanoSignatureVerifier\VerificationResult;
+use lloc\CardanoSignatureVerifier\VerifySignatureCommand;
 
 final readonly class MyCustomVerifier implements SignatureVerifierInterface
 {

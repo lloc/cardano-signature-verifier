@@ -1,6 +1,6 @@
 {
-    "name": "dennis-ploetner/crypto-verifier",
-    "description": "Crypto Verifier in PHP for the Cardano Blockchain.",
+    "name": "lloc/cardano-signature-verifier",
+    "description": "Cardano Signature Verifier in PHP/WordPress for the Cardano Blockchain.",
     "license": "GPL-2.0-or-later",
     "type": "library",
     "authors": [
@@ -33,14 +33,14 @@
     ],
     "autoload": {
         "psr-4": {
-            "lloc\\CryptoVerifier\\": "src/"
+            "lloc\\CardanoSignatureVerifier\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload-dev": {
         "psr-4": {
-            "lloc\\CryptoVerifier\\Tests\\": [
+            "lloc\\CardanoSignatureVerifier\\Tests\\": [
                 "tests/phpunit/",
                 "tests/phpunit/src"
             ]

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace lloc\CryptoVerifier\Infrastructure;
+namespace lloc\CardanoSignatureVerifier\Infrastructure;
 
 use Closure;
-use lloc\CryptoVerifier\SignatureVerifierInterface;
-use lloc\CryptoVerifier\VerificationErrorCode;
-use lloc\CryptoVerifier\VerificationResult;
-use lloc\CryptoVerifier\VerifySignatureCommand;
+use lloc\CardanoSignatureVerifier\SignatureVerifierInterface;
+use lloc\CardanoSignatureVerifier\VerificationErrorCode;
+use lloc\CardanoSignatureVerifier\VerificationResult;
+use lloc\CardanoSignatureVerifier\VerifySignatureCommand;
 
 final readonly class CardanoSignerCliVerifier implements SignatureVerifierInterface
 {

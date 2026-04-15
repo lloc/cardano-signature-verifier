@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace lloc\CryptoVerifier\Tests\Unit\Infrastructure;
+namespace lloc\CardanoSignatureVerifier\Tests\Unit\Infrastructure;
 
 use Brain\Monkey\Functions;
-use lloc\CryptoVerifier\Infrastructure\RemoteHttpVerifier;
-use lloc\CryptoVerifier\Tests\AbstractTestCase;
-use lloc\CryptoVerifier\VerificationErrorCode;
-use lloc\CryptoVerifier\VerifySignatureCommand;
+use lloc\CardanoSignatureVerifier\Infrastructure\RemoteHttpVerifier;
+use lloc\CardanoSignatureVerifier\Tests\AbstractTestCase;
+use lloc\CardanoSignatureVerifier\VerificationErrorCode;
+use lloc\CardanoSignatureVerifier\VerifySignatureCommand;
 
 class RemoteHttpVerifierTest extends AbstractTestCase
 {

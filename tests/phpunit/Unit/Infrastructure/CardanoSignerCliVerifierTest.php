@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace lloc\CryptoVerifier\Tests\Unit\Infrastructure;
+namespace lloc\CardanoSignatureVerifier\Tests\Unit\Infrastructure;
 
-use lloc\CryptoVerifier\Infrastructure\CardanoSignerCliVerifier;
-use lloc\CryptoVerifier\Tests\AbstractTestCase;
-use lloc\CryptoVerifier\VerificationErrorCode;
-use lloc\CryptoVerifier\VerifySignatureCommand;
+use lloc\CardanoSignatureVerifier\Infrastructure\CardanoSignerCliVerifier;
+use lloc\CardanoSignatureVerifier\Tests\AbstractTestCase;
+use lloc\CardanoSignatureVerifier\VerificationErrorCode;
+use lloc\CardanoSignatureVerifier\VerifySignatureCommand;
 
 class CardanoSignerCliVerifierTest extends AbstractTestCase
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace lloc\CryptoVerifier\Cli;
+namespace lloc\CardanoSignatureVerifier\Cli;
 
-use lloc\CryptoVerifier\SignatureVerifierInterface;
-use lloc\CryptoVerifier\VerifySignatureCommand;
+use lloc\CardanoSignatureVerifier\SignatureVerifierInterface;
+use lloc\CardanoSignatureVerifier\VerifySignatureCommand;
 use WP_CLI;
 
 final readonly class VerifyCommand

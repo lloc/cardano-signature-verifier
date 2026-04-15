@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace lloc\CryptoVerifier;
+namespace lloc\CardanoSignatureVerifier;
 
 final readonly class VerifySignatureCommand
 {

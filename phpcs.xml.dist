@@ -20,17 +20,17 @@
   <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
     <properties>
       <property name="rootNamespaces" type="array">
-        <element key="src" value="lloc\CryptoVerifier"/>
-        <element key="tests/phpunit/src" value="lloc\CryptoVerifier\Tests"/>
-        <element key="tests/phpunit/Unit" value="lloc\CryptoVerifier\Tests\Unit"/>
-        <element key="tests/phpunit/Functional" value="lloc\CryptoVerifier\Tests\Functional"/>
+        <element key="src" value="lloc\CardanoSignatureVerifier"/>
+        <element key="tests/phpunit/src" value="lloc\CardanoSignatureVerifier\Tests"/>
+        <element key="tests/phpunit/Unit" value="lloc\CardanoSignatureVerifier\Tests\Unit"/>
+        <element key="tests/phpunit/Functional" value="lloc\CardanoSignatureVerifier\Tests\Functional"/>
       </property>
     </properties>
   </rule>
   <exclude-pattern>*/vendor/*</exclude-pattern>
   <exclude-pattern>*/tests/phpstan/*</exclude-pattern>
   <config name="testVersion" value="8.4-"/>
-  <config name="text_domain" value="crypto-verifier"/>
+  <config name="text_domain" value="cardano-signature-verifier"/>
   <file>./src</file>
   <file>./tests</file>
 </ruleset>

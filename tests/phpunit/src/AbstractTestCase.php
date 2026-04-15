@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace lloc\CryptoVerifier\Tests;
+namespace lloc\CardanoSignatureVerifier\Tests;
 
 use Brain\Monkey;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
